@@ -1,0 +1,128 @@
+/* psuedo class for the root element to define the color scheme */
+/* set of vars  */
+:root {
+  --background-surface: #171321;
+  /* dark blue */
+  --primaryColor: #0d314b;
+  /* plum */
+  --secondaryColor: #4b0d49;
+  --color3: #86fbfb;
+  --color4: #e2e7f0;
+  --color5: #e310cb;
+  /* --color6: #ede0d4; */
+  --highlight: #fbf2c6;
+  --font-size: 1.3rem;
+  --mono: "Oxygen mono", monospace;
+  --sans: Oxygen, sans-serif;
+}
+
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--sans);
+  background-color: var(--background-surface);
+}
+
+body > header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: var(--secondaryColor);
+}
+
+body > main {
+  margin: auto;
+  margin-top: 60px;
+  max-width: 500px;
+}
+
+h1 {
+  color: var(--color3);
+  margin: 0;
+  text-align: center;
+  padding: 10px 0 5px 0;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+div {
+  background-color: var(--primaryColor);
+  color: var(--color5);
+  margin: 0;
+  text-align: right;
+  padding: 4px;
+  font-size: 15px;
+}
+
+ul {
+  display: none;
+  padding: 0;
+}
+
+nav {
+  font-family: var(--sans);
+}
+
+a.navlink {
+  color: var(--color4);
+  padding: 8px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color5);
+}
+
+#linkHome {
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+#linkOrder {
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+section.page {
+  display: none;
+}
+
+#badge {
+  padding: 4px;
+  background-color: var(--color5);
+  border-radius: 15px;
+  width: 15px;
+
+  text-align: center;
+  font-size: x-small;
+  color: white;
+  position: absolute;
+  right: 5px;
+  top: 6px;
+}
+
+footer {
+  background-color: var(--secondaryColor);
+  color: var(--color3);
+  font-family: var(--sans);
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
